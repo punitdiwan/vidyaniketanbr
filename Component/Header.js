@@ -100,7 +100,7 @@ const Header = ({header_data}) => {
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
                       <Link href="/ManagementDesk">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-[#272d57] hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
-                          Management Desk
+                          Management&nbsp;Message
                         </a>
                       </Link>
                     </li>
