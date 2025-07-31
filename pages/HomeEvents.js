@@ -1,11 +1,14 @@
 
 import React, { useState, useEffect } from 'react';
 import 'react-calendar/dist/Calendar.css';
-import Calendar from 'react-calendar';
+// import Calendar from 'react-calendar';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios';
 import { base_url, school_name } from '../SimpleState/auth'
+import dynamic from 'next/dynamic';
+
+const Calendar = dynamic(() => import('react-calendar'), { ssr: false });
 
 const HomeEvents = () => {
     const [value, onChange] = useState(new Date()); //this is for Calendar
@@ -16,7 +19,7 @@ const HomeEvents = () => {
 
     const slides = [
         { title: "/images/is3.jpg ", description: 'Name-1' },
-        { title: " /images/is5.jpg", description: 'Name-2' },
+        { title: "/images/is5.jpg", description: 'Name-2' },
     ];
 
 
@@ -33,7 +36,7 @@ const HomeEvents = () => {
     useEffect(() => {
         axios.get(`${get_base_url}/${get_school_name}/items/toppers?fields=*,photo.*`)
             .then((response) => {
-
+                console.log(response.data);
                 if (response?.data?.data?.length > 0) {
                     setdata(response)
                 }
@@ -109,7 +112,7 @@ const HomeEvents = () => {
                             return <div className="carousel-inner" role="listbox" key={index} >
                                 <div className='carousel ' role="listbox" style={{ marginTop: "15px" }}>
                                     <img
-                                        src={item?.photo?.data?.full_url}
+                                        src={item?.photo?.data?.full_url?.replace('http://', 'https://')}
                                         style={{ height: "250px", width: "100%", border: "1px solid #ccc" }}
                                         alt="sorry_no_img"
                                     />

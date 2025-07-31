@@ -13,7 +13,7 @@ const Contactus = ({data_header}) => {
         </div>
         <div className="mt-[15px] lg:mx-16 px-6     flex md:flex-row flex-col">
           <iframe className=" md:w-[600px] md:h-[450px] "
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.775520272519!2d77.40029541394924!3d23.287605012216584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c6976d26a269f%3A0x5acf58a8e1de8475!2sVidya%20Niketan%20High%20School!5e0!3m2!1sen!2sin!4v1635160159606!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.8138497670825!2d77.4030295!3d23.286212700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c6976d26a269f%3A0x5acf58a8e1de8475!2sVidya%20Niketan%20High%20School!5e0!3m2!1sen!2sin!4v1753954958046!5m2!1sen!2sin"
 
             style={{ border: "0" }}
             allowFullScreen=""
